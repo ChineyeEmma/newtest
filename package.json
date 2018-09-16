@@ -4,7 +4,7 @@
   "description": "Web application that uses Tone Analyzer to get the tone from a text message",
   "repository": {
     "type": "git",
-    "url": "https://github.com/watson-developer-cloud/tone-analyzer-nodejs.git"
+    "url": "https://github.com/ChineyeEmma/newtest"
   },
   "author": "IBM Corp.",
   "contributors": [
