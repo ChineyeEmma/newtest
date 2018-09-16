@@ -21,6 +21,13 @@ require('dotenv').load({silent: true});
 var express = require('express');
 var app = express();
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
+var config = {
+
+    username: "",
+    password: ""
+};
+
+module.exports = config;
 
 // Bootstrap application settings
 require('./config/express')(app);
