@@ -1,0 +1,58 @@
+{
+  "name": "newtest",
+  "version": "4.0.0",
+  "description": "Web application that uses Tone Analyzer to get the tone from a text message",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChineyeEmma/newtest.git"
+  },
+  "author": "IBM Corp.",
+  "contributors": [
+    {
+      "name": "James Zhang",
+      "email": "jzhang300@us.ibm.com"
+    },
+    {
+      "name": "Eva Xiaohui Luo",
+      "email": "evaluo_xhl@us.ibm.com"
+    },
+    {
+      "name": "German Attanasio Ruiz",
+      "email": "germanatt@us.ibm.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ChineyeEmma/newtest/issues"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "npm run lint && npm run test-unit",
+    "test-unit": "mocha test/unit --exit",
+    "test-integration": "mocha test/integration --exit",
+    "lint": "eslint .",
+    "autofix": "eslint --fix .",
+    "codecov": "npm run test && (codecov || true)"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-rate-limit": "^2.11.0",
+    "express-secure-only": "^0.2.1",
+    "helmet": "^3.12.1",
+    "i18n": "^0.8.3",
+    "watson-developer-cloud": "^3.7.0"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.4",
+    "eslint": "^5.1.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
