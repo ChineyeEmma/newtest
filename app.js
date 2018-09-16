@@ -71,4 +71,4 @@ app.post('/api/tone', function(req, res, next) {
 // error-handler application settings
 require('./config/error-handler')(app);
 
-module.exports = app 
+module.exports = app;
