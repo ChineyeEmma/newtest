@@ -22,7 +22,7 @@ deploy:
     - bx-blue-green-travis
   on:
     branch: master
-    repo: watson-developer-cloud/tone-analyzer-nodejs
+    repo: https://github.com/ChineyeEmma/newtest-nodejs
   skip_cleanup: true
 - provider: script
   skip_cleanup: true
