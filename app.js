@@ -23,8 +23,8 @@ var app = express();
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 var config = {
 
-    username: "",
-    password: ""
+    username: "708f5664-061a-4780-8728-d2d185e1eb89",
+    password: "3eolwKkRCqT1"
 };
 
 module.exports = config;
@@ -37,8 +37,8 @@ var toneAnalyzer = new ToneAnalyzerV3({
   // If unspecified here, the TONE_ANALYZER_USERNAME and TONE_ANALYZER_PASSWORD environment properties will be checked
   // or TONE_ANALYZER_IAM_APIKEY if is available
   // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
-  // username: '<username>',
-  // password: '<password>',
+username: '708f5664-061a-4780-8728-d2d185e1eb89',
+ password: '3eolwKkRCqT1',
   version: '2017-09-21'
 });
 
