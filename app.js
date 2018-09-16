@@ -21,13 +21,14 @@ require('dotenv').load({silent: true});
 var express = require('express');
 var app = express();
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
-var config = {
 
-    username: "708f5664-061a-4780-8728-d2d185e1eb89",
-    password: "3eolwKkRCqT1"
-};
+// var config = {
 
-module.exports = config;
+//     username: "708f5664-061a-4780-8728-d2d185e1eb89",
+//     password: "3eolwKkRCqT1"
+// };
+
+// module.exports = config;
 
 // Bootstrap application settings
 require('./config/express')(app);
@@ -46,16 +47,28 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+//var userInputText = document.getElementById('usertext');
+
+var toneParams = {
+
+  'tone_input': "i am happy",
+  'content_type': 'application/json'
+
+};
+
+
 app.post('/api/tone', function(req, res, next) {
   toneAnalyzer.tone(req.body, function(err, data) {
     if (err) {
-      return next(err);
-    }
-    return res.json(data);
-  });
+      console.log(err);
+    } else {
+
+      console.log(JSON.stringify(data));
+
+  };
 });
 
 // error-handler application settings
 require('./config/error-handler')(app);
 
-module.exports = app;
+module.exports = app 
